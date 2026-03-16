@@ -1,0 +1,122 @@
+.info-container{
+  padding:70px 90px;
+  background:linear-gradient(135deg,#eef2ff,#f9fbff,#e6f0ff);
+  font-family:'Poppins', Arial, Helvetica, sans-serif;
+}
+
+/* main title */
+.info-container h1{
+  text-align:center;
+  font-size:44px;
+  margin-bottom:60px;
+  color:#222;
+  letter-spacing:1px;
+  position:relative;
+}
+
+.info-container h1::after{
+  content:"";
+  width:120px;
+  height:4px;
+  background:linear-gradient(90deg,#4facfe,#00f2fe);
+  display:block;
+  margin:12px auto 0;
+  border-radius:10px;
+}
+
+/* category title */
+.category-section{
+  margin-bottom:70px;
+}
+
+.category-section h2{
+  margin-bottom:30px;
+  color:#333;
+  font-size:26px;
+  border-left:6px solid #4facfe;
+  padding-left:12px;
+}
+
+/* card grid */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+}
+
+/* card design */
+.info-card{
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(10px);
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:all 0.4s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+/* gradient hover overlay */
+.info-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(79,172,254,0.25),transparent);
+  transition:0.5s;
+}
+
+.info-card:hover::before{
+  left:100%;
+}
+
+/* hover animation */
+.info-card:hover{
+  transform:translateY(-12px) scale(1.02);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* title */
+.info-card h3{
+  margin-bottom:12px;
+  font-size:20px;
+  color:#1a1a1a;
+}
+
+/* text */
+.info-card p{
+  font-size:15px;
+  color:#555;
+  margin-bottom:8px;
+  line-height:1.5;
+}
+
+/* subtle floating animation */
+.info-card{
+  animation:floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-6px);}
+  100%{transform:translateY(0px);}
+}
+
+/* responsive */
+@media(max-width:900px){
+  .card-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:600px){
+  .info-container{
+    padding:50px 25px;
+  }
+
+  .info-container h1{
+    font-size:34px;
+  }
+}
