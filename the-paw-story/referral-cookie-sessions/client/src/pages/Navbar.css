@@ -1,0 +1,99 @@
+#Navbar{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+
+    padding: 10px 10px;
+}
+#Navbar1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: #0a0a0a; /* change as per theme */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo container */
+#Navbar1 .image {
+  display: flex;
+  align-items: center;
+
+}
+#Navbar1  .image h3 {
+  color: white;
+  text-wrap: nowrap;
+    margin-left: 5px;
+    font-family: cursive;
+}
+
+#Navbar1 img {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Right side auth links */
+#Navbar1 span {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Links style */
+#Navbar1 a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 4px;
+}
+
+#Navbar1 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #df6108;
+  transition: width 0.3s ease;
+}
+
+#Navbar1 a:hover {
+  color: #df6108;
+}
+
+#Navbar1 a:hover::after {
+  width: 100%;
+}
+
+/* Logout button */
+#Navbar1 button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+#Navbar1 button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+  #Navbar1 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #Navbar1 span {
+    justify-content: center;
+  }
+}

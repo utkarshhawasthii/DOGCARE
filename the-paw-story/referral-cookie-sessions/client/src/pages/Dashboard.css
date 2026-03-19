@@ -1,0 +1,163 @@
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ html , body{
+     height: 100%;
+     width: 100%;
+ } 
+
+
+
+/* Navbar container */
+nav {
+  background: #ffffff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Links */
+nav a {
+  text-decoration: none;
+  color: #34495e;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  background: #f1f7ff;
+  color: #007bff;
+}
+
+/* Button (Logout) */
+nav button {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+nav button:hover {
+  background: #e63939;
+}
+
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Left side (Profile + Referrals) */
+.container > div:first-child {
+  flex: 0 0 28%; /* Around 26-30% */
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings */
+.container h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 6px;
+}
+
+.container h4 {
+  margin: 16px 0 10px;
+  font-size: 16px;
+  color: #34495e;
+}
+
+/* Profile Info */
+.user-info {
+  background: #f8f9fb;
+  border: 1px solid #e4e6eb;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+}
+
+.user-info div {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+/* Referrals */
+.referral-list {
+  flex: 1;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #fdfdfd;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.referral-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.referral-list li {
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #555;
+  border-bottom: 1px dashed #ddd;
+  transition: background 0.2s;
+}
+
+.referral-list li:hover {
+  background: #f1f7ff;
+  border-radius: 6px;
+}
+
+/* Right side (Frontpg) */
+.container > div:last-child {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Scrollbar styling */
+.referral-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.referral-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.referral-list::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}

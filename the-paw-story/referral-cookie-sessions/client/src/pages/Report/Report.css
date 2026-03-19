@@ -1,0 +1,156 @@
+/* Animated background */
+.report-container{
+  max-width: 100vw;
+  margin: auto;
+  padding: 70px 120px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(-45deg,#fdfbfb,#eef4ff,#f7faff,#ffffff);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* Background animation */
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* Title */
+.report-container h1{
+  font-size: 44px;
+  margin-bottom: 35px;
+  text-align: center;
+  color: #d62828;
+  letter-spacing: 1px;
+  position: relative;
+  animation: fadeUp 1s ease;
+}
+
+/* Animated underline */
+.report-container h1::after{
+  content:"";
+  width:0;
+  height:4px;
+  background:#ff6b6b;
+  display:block;
+  margin:12px auto;
+  border-radius:10px;
+  animation: lineGrow 1.5s ease forwards;
+}
+
+@keyframes lineGrow{
+  from{width:0}
+  to{width:90px}
+}
+
+/* Section headings */
+.report-container h2{
+  margin-top:45px;
+  margin-bottom:18px;
+  font-size:28px;
+  color:#222;
+  padding-left:16px;
+  border-left:6px solid #ff6b6b;
+  animation: fadeUp 1s ease;
+}
+
+/* Paragraphs */
+.report-container p{
+  font-size:17px;
+  margin-bottom:18px;
+  color:#444;
+  animation: fadeUp 1.2s ease;
+}
+
+/* Lists */
+.report-container ul{
+  margin-left:10px;
+  margin-bottom:25px;
+  padding-left:20px;
+}
+
+.report-container li{
+  margin-bottom:12px;
+  font-size:16px;
+  position:relative;
+  transition: transform 0.25s ease;
+}
+
+/* Hover animation for list */
+.report-container li:hover{
+  transform: translateX(6px);
+}
+
+/* Styled bullet */
+.report-container li::marker{
+  color:#ff6b6b;
+  font-size:18px;
+}
+
+/* Emergency box */
+.emergency-box{
+  background:white;
+  border-left:6px solid #ff4d4d;
+  padding:28px;
+  border-radius:14px;
+  margin-top:20px;
+  font-weight:500;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
+  animation: fadeUp 1.4s ease;
+}
+
+/* Glow effect */
+.emergency-box:hover{
+  transform: translateY(-6px);
+  box-shadow:0 20px 40px rgba(255,77,77,0.25);
+}
+
+/* Emergency numbers hover */
+.emergency-box p{
+  margin:10px 0;
+  font-size:16px;
+  transition: color 0.3s;
+}
+
+.emergency-box p:hover{
+  color:#d62828;
+}
+
+/* Fade animation */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .report-container{
+    padding:50px 40px;
+  }
+}
+
+@media (max-width:768px){
+
+  .report-container h1{
+    font-size:34px;
+  }
+
+  .report-container h2{
+    font-size:24px;
+  }
+
+}
